@@ -1,0 +1,35 @@
+# Initial Justice League list
+justice_league = ["Superman", "Batman", "Wonder Woman", "Flash", "Aquaman", "Green Lantern"]
+print("Original Justice League:", justice_league)
+
+# 1. Calculate number of members
+num_members = len(justice_league)
+print("\n1. Number of members:", num_members)
+
+# 2. Add Batgirl and Nightwing
+justice_league.extend(["Batgirl", "Nightwing"])
+print("\n2. After adding new members:", justice_league)
+
+# 3. Make Wonder Woman the leader (move to beginning)
+justice_league.remove("Wonder Woman")
+justice_league.insert(0, "Wonder Woman")
+print("\n3. After making Wonder Woman leader:", justice_league)
+
+# 4. Separate Aquaman and Flash by moving Green Lantern between them
+# Find positions
+aquaman_pos = justice_league.index("Aquaman")
+flash_pos = justice_league.index("Flash")
+
+# Move Green Lantern between them
+justice_league.remove("Green Lantern")
+justice_league.insert(flash_pos, "Green Lantern")
+print("\n4. After separating Aquaman and Flash:", justice_league)
+
+# 5. Replace with new team
+justice_league = ["Cyborg", "Shazam", "Hawkgirl", "Martian Manhunter", "Green Arrow"]
+print("\n5. New Justice League after crisis:", justice_league)
+
+# 6. Sort alphabetically (new leader at 0th index)
+justice_league.sort()
+print("\n6. Sorted Justice League with new leader:", justice_league)
+print("New leader:", justice_league[0])
